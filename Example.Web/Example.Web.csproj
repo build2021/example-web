@@ -6,4 +6,8 @@
     <CodeAnalysisRuleSet>..\Example.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Example.Core\Example.Core.csproj" />
+  </ItemGroup>
+
 </Project>

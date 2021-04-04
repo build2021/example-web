@@ -29,7 +29,7 @@ namespace Example.Web.Infrastructure.Filters
                     context.Result = new RedirectResult(
                         String.Concat(
                             context.HttpContext.Request.Path,
-                            context.HttpContext.Request.Query.Replace("page", paged.TotalPage.ToString(CultureInfo.InvariantCulture))));
+                            context.HttpContext.Request.Query.Replace("Page", paged.TotalPage.ToString(CultureInfo.InvariantCulture))));
                 }
             }
         }

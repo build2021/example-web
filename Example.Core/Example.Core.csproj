@@ -6,4 +6,13 @@
     <CodeAnalysisRuleSet>..\Example.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Accessors\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Usa.Smart.Core" Version="2.0.0-beta3" />
+    <PackageReference Include="Usa.Smart.Data.Accessor" Version="2.0.0-beta1" />
+  </ItemGroup>
+
 </Project>

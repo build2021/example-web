@@ -13,9 +13,6 @@ namespace Example.Web
 
     using Example.Services;
     using Example.Web.Authentication;
-    using Example.Web.Infrastructure.ApplicationModels;
-    using Example.Web.Infrastructure.Exceptions;
-    using Example.Web.Infrastructure.Filters;
     using Example.Web.Reports.Csv.Helpers;
     using Example.Web.Reports.Pdf.Builders;
     using Example.Web.Reports.Pdf.Helpers;
@@ -35,6 +32,9 @@ namespace Example.Web
 
     using PdfSharpCore.Fonts;
 
+    using Smart.AspNetCore;
+    using Smart.AspNetCore.ApplicationModels;
+    using Smart.AspNetCore.Filters;
     using Smart.Data;
     using Smart.Data.Accessor.Extensions.DependencyInjection;
     using Smart.Data.SqlClient;

@@ -19,7 +19,7 @@
                 </button>
             </div>
         </div>
-        <div i-if="@(!String.IsNullOrEmpty(Model?.Barcode))" class="form-group">
+        <div if="@(!String.IsNullOrEmpty(Model?.Barcode))" class="form-group">
             <qrcode height="320" width="320" content="@Model.Barcode" />
         </div>
     </form>

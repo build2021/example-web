@@ -4,10 +4,10 @@ namespace Example.Web.Reports.Csv.Helpers
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    using Example.Web.Infrastructure;
-
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
+
+    using Smart.AspNetCore.Mvc;
 
     public class CsvExporter
     {

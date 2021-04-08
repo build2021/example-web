@@ -6,14 +6,14 @@
 }
 
 <ul class="pagination justify-content-center">
-    <li i-if="@Model.HasPrev" class="page-item"><a href="@Url.ReplaceQuery("Page", (Model.Page - 1).ToString())" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-    <li i-if="@(!Model.HasPrev)" class="page-item disabled"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+    <li if="@Model.HasPrev" class="page-item"><a href="@ViewContext.ReplaceQuery("Page", (Model.Page - 1).ToString())" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+    <li if="@(!Model.HasPrev)" class="page-item disabled"><a href="#" class="page-link"><i class="fas fa-angle-left"></i></a></li>
 
     @for (var page = start; page <= end; page++)
     {
-        <li class="page-item @((page == Model.Page).Active())"><a href="@Url.ReplaceQuery("Page", page.ToString())" class="page-link">@(page)</a></li>
+        <li class="page-item @((page == Model.Page).Active())"><a href="@ViewContext.ReplaceQuery("Page", page.ToString())" class="page-link">@(page)</a></li>
     }
 
-    <li i-if="@Model.HasNext" class="page-item"><a href="@Url.ReplaceQuery("Page", (Model.Page + 1).ToString())" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-    <li i-if="@(!Model.HasNext)" class="page-item disabled"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+    <li if="@Model.HasNext" class="page-item"><a href="@ViewContext.ReplaceQuery("Page", (Model.Page + 1).ToString())" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+    <li if="@(!Model.HasNext)" class="page-item disabled"><a href="#" class="page-link"><i class="fas fa-angle-right"></i></a></li>
 </ul>

@@ -5,10 +5,11 @@ namespace Example.Web.Infrastructure.Filters
     using System.Linq;
 
     using Example.Models.Paging;
-    using Example.Web.Infrastructure.Http;
 
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Filters;
+
+    using Smart.AspNetCore;
 
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
     public sealed class PageCorrectAttribute : ActionFilterAttribute
@@ -29,7 +30,7 @@ namespace Example.Web.Infrastructure.Filters
                     context.Result = new RedirectResult(
                         String.Concat(
                             context.HttpContext.Request.Path,
-                            context.HttpContext.Request.Query.Replace("Page", paged.TotalPage.ToString(CultureInfo.InvariantCulture))));
+                            context.HttpContext.Request.QueryString.Replace("Page", paged.TotalPage.ToString(CultureInfo.InvariantCulture))));
                 }
             }
         }

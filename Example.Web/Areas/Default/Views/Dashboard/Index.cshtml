@@ -35,13 +35,13 @@
             <tr>
                 <td>@entry.Id</td>
                 <td>@entry.Name</td>
-                <td class="text-center"><span i-if="@entry.Flag" class="badge badge-success">ON</span></td>
+                <td class="text-center"><span if="@entry.Flag" class="badge badge-success">ON</span></td>
                 <td>@entry.DateTime.ToString("yyyy/MM/dd HH:mm:ss.fff")</td>
             </tr>
         }
     </tbody>
 </table>
 
-<div i-if="@(paged != null)" class="text-center">
+<div if="@(paged != null)" class="text-center">
     @await Html.PartialAsync("_Pager", paged)
 </div>
